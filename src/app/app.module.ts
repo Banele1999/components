@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 // used for timer countdown
 import { CountdownModule } from 'ngx-countdown';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 
 // components
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
@@ -24,7 +27,8 @@ import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CountdownModule
+    CountdownModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

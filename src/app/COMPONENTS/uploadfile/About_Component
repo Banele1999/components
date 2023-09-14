@@ -11,3 +11,5 @@ Send a POST request.
 vid: 
 Rest API with cloud functions
 
+Configure the POST request
+1. Add body. The body is of type formData. 
