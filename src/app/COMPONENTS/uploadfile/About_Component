@@ -1,0 +1,13 @@
+Not seen as form control whereby the file can be automatically sync into the form object.
+
+You can fetch the file by adding a change listner.
+This will be triggered whenever a file uploaded by the user change.
+
+HttpClientModule: 
+1. Need it to upload the file.
+2. Inject it to the component (as a constructor)
+
+Send a POST request.
+vid: 
+Rest API with cloud functions
+

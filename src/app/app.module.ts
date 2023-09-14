@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 // components
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { PageComponentsComponent } from './pages/page-components/page-components.component';
+import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.component';
 
 
 
@@ -17,7 +18,8 @@ import { PageComponentsComponent } from './pages/page-components/page-components
   declarations: [
     AppComponent,
     CountdownComponent,
-    PageComponentsComponent
+    PageComponentsComponent,
+    UploadfileComponent
   ],
   imports: [
     BrowserModule,
