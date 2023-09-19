@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-uploadfile',
@@ -7,27 +8,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./uploadfile.component.css']
 })
 export class UploadfileComponent {
-  // selectedFile: File = null; //property to store the file
-  selectedFile = null;
+  title = 'fileUpload';
+  files: any;
 
-  constructor(private http: HttpClient){  //inject the http service
+  constructor(private http: HttpClient, private form: FormBuilder){}
 
+  selectFile(event:any){
+    if(event.target.files.length > 0){
+      const file = event.target.files[0];
+      this.files = file;
+    }
   }
 
-  //method
-  onFileSelected(event: any){
-    // console.log(event);
-    // this.selectedFile = <File>event.target.files[0];
-    this.selectedFile = event.target.files[0];
-    
-  }
+  onSubmit(){
+    const formData = new FormData();
+    //name file should be the same as the one on the multer
+    formData.append('file', this.files);
 
-  onUpload(){
-    const fd = new FormData();
-    // fd.append('image', this.selectedFile, this.selectedFile.name);
-    this.http.post('url', fd) //send a POST request
-      .subscribe(res => {
-        console.log(res);
-      });
+    this.http.post<any>('http://localhost:3000/file', formData).subscribe(
+      (res) =>  console.log(res),
+      (err) => console.log(err)
+    );
   }
 }
