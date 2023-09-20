@@ -14,6 +14,7 @@ import { CountdownModule } from 'ngx-countdown';
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { PageComponentsComponent } from './pages/page-components/page-components.component';
 import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -29,6 +30,7 @@ import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.componen
     AppRoutingModule,
     CountdownModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

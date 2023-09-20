@@ -1,18 +1,53 @@
+<div>
+    <h2>Upload File</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input type="file" name="file" (change)="onFileSelected($event)" />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <h4>uploadfile</h4>
 <input type="file" (change)="onFileSelected($event)">
 <button type="button" (click)="onUpload()">Upload</button> -->
 
-<h1>Upload Presentation</h1>
+<!-- <h1>Upload Presentation</h1>
 
 <div style="text-align: center;">
     <form>
         <div>
-            <input type="file" multiple (change)="selectFile($event)">
+            <input type="file" name="image" (change)="selectFile($event)">
         </div>
         <br>
         <div>
             <button type="submit" (click)="onSubmit()">Upload</button>
         </div>
     </form>
-</div>
+</div> -->
 
