@@ -15,6 +15,7 @@ import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { PageComponentsComponent } from './pages/page-components/page-components.component';
 import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './COMPONENTS/navbar/navbar.component';
 
 
 
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     CountdownComponent,
     PageComponentsComponent,
-    UploadfileComponent
+    UploadfileComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
