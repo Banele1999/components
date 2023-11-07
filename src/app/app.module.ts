@@ -8,14 +8,16 @@ import {HttpClientModule} from '@angular/common/http';
 // used for timer countdown
 import { CountdownModule } from 'ngx-countdown';
 
-
+//services
+import { CountryService } from './SERVICES/country.service';
 
 // components
 import { CountdownComponent } from './COMPONENTS/countdown/countdown.component';
 import { PageComponentsComponent } from './pages/page-components/page-components.component';
 import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './COMPONENTS/navbar/navbar.component';
+import { DropdownComponent } from './COMPONENTS/dropdown/dropdown.component';
 
 
 
@@ -25,7 +27,8 @@ import { NavbarComponent } from './COMPONENTS/navbar/navbar.component';
     CountdownComponent,
     PageComponentsComponent,
     UploadfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +36,9 @@ import { NavbarComponent } from './COMPONENTS/navbar/navbar.component';
     CountdownModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [CountryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

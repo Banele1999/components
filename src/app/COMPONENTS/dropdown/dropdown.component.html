@@ -1,0 +1,9 @@
+<!-- dropdown.component.html (Angular component template) -->
+
+<div class="form-group">
+    <label for="country">Select Country:</label>
+    <select id="country" class="form-control">
+      <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+    </select>
+  </div>
+  
