@@ -18,6 +18,7 @@ import { UploadfileComponent } from './COMPONENTS/uploadfile/uploadfile.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './COMPONENTS/navbar/navbar.component';
 import { DropdownComponent } from './COMPONENTS/dropdown/dropdown.component';
+import { ResultsComponent } from './COMPONENTS/results/results.component';
 
 
 
@@ -28,7 +29,8 @@ import { DropdownComponent } from './COMPONENTS/dropdown/dropdown.component';
     PageComponentsComponent,
     UploadfileComponent,
     NavbarComponent,
-    DropdownComponent
+    DropdownComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

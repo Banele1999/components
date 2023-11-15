@@ -1,0 +1,37 @@
+<form>
+    <h1>Add Students Score Calculation</h1>
+    <div>
+        <label >Score 1</label>
+        <input type = "text"  name="num1" [(ngModel)] = "score1" class="form-control"  placeholder="Enter Num 1">
+    </div>
+    
+    <div>
+        <label >Score 2</label>
+        <input type = "text"  name="num2"  [(ngModel)] = "score2" class="form-control"  placeholder="Enter Num 2">
+    </div>
+
+    <div>
+        <label >Score 3</label>
+        <input type = "text"  name="num2"  [(ngModel)] = "score3" class="form-control"  placeholder="Enter Num 2">
+    </div>
+    
+    <div >
+        <label >Total</label>
+        <input  class="form-control"  placeholder="Total" value="{{ result }}"> 
+    </div>
+    
+    <div >
+        <label >Average</label>
+        <input  class="form-control"  placeholder="Total" value="{{ avg }}"> 
+    </div>
+
+    <div *ngIf="avg > 50; else grade">
+        Pass
+    </div>
+      
+    <ng-template #grade>
+        Fail
+    </ng-template>
+
+    <button  (click)="StudentTot()" class="btn btn-primary mt-4">Submit</button>
+</form>
